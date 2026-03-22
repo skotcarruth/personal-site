@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skot Carruth</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif:wght@400&display=swap" rel="stylesheet">
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #1a1a1a;
+      background: #ededed;
+      font-size: 15px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      display: flex;
+      height: 100vh;
+      width: 100%;
+    }
+
+    .left {
+      width: 50%;
+      padding: 50px 40px 40px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow-y: auto;
+      opacity: 0;
+      animation: fadeIn 0.8s ease-out 0.2s forwards;
+    }
+
+    .content {
+      max-width: 460px;
+    }
+
+    .section-label {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .block {
+      margin-bottom: 28px;
+    }
+
+    .block p {
+      margin-bottom: 14px;
+      font-size: 15px;
+      line-height: 1.55;
+    }
+
+    .block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .previously-intro {
+      font-weight: 700;
+    }
+
+    .section-gap {
+      margin-top: 40px;
+    }
+
+    a {
+      color: #1a1a1a;
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      text-underline-offset: 3px;
+    }
+
+    a:hover {
+      text-decoration-style: solid;
+    }
+
+    .social-links {
+      margin-top: auto;
+      padding-top: 60px;
+    }
+
+    .social-links a {
+      display: block;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .right {
+      width: 50%;
+      position: relative;
+      overflow: hidden;
+      opacity: 0;
+      animation: fadeIn 0.8s ease-out 0.4s forwards;
+    }
+
+    .portrait {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      display: block;
+    }
+
+    .photo-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 30px 30px 36px 30px;
+      pointer-events: none;
+    }
+
+    .name-block h1 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 22px;
+      font-weight: 500;
+      color: #fff;
+      line-height: 1.2;
+    }
+
+    .name-block .role {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      color: #fff;
+      margin-top: 2px;
+    }
+
+    .tagline {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-style: normal;
+      font-size: 28px;
+      line-height: 1.3;
+      color: #fff;
+    }
+
+    @media (max-width: 900px) {
+      .page {
+        flex-direction: column-reverse;
+        height: auto;
+        overflow: auto;
+      }
+
+      html, body {
+        overflow: auto;
+        height: auto;
+      }
+
+      .left, .right {
+        width: 100%;
+      }
+
+      .right {
+        height: 70vh;
+        min-height: 400px;
+      }
+
+      .left {
+        padding: 36px 24px 40px;
+      }
+
+      .tagline {
+        font-size: 22px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .tagline {
+        font-size: 18px;
+      }
+
+      .name-block h1 {
+        font-size: 18px;
+      }
+
+      .name-block .role {
+        font-size: 14px;
+      }
+
+      .right {
+        height: 55vh;
+        min-height: 320px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="left">
+      <div class="content">
+        <div class="section-label">Currently</div>
+        <div class="block">
+          <p>Revolutionizing the way you shop fashion by bringing e-commerce to your block at <a href="http://fitbar.nyc/" target="_blank" rel="noopener">Fitbar.nyc</a></p>
+          <p style="margin-top:14px">Curating space at <a href="https://bit.ly/m/skycamp" target="_blank" rel="noopener">SkyCamp</a> and <a href="http://airbnb.com/h/the-art-loft" target="_blank" rel="noopener">The Art Loft</a>.</p>
+        </div>
+
+        <div class="section-label section-gap">Previously</div>
+        <div class="block">
+          <p class="previously-intro">Helped other founders get their product design house in order as <a href="https://theuxarchitect.com/" target="_blank" rel="noopener">The UX Architect</a> and <a href="http://techstars.com/" target="_blank" rel="noopener">Techstars Mentor</a>.</p>
+          <p style="margin-top:14px">Co-founded and led the software innovation studio Philosophie Group to launch over 300 web and mobile applications. Acquired by <a href="http://infobeans.com/" target="_blank" rel="noopener">InfoBeans</a>.</p>
+          <p style="margin-top:14px">Curriculum Fellow and UX Design instructor at <a href="https://generalassemb.ly/" target="_blank" rel="noopener">General Assembly</a>. Guest lecturer on design and entrepreneurship at <a href="https://www.anderson.ucla.edu/" target="_blank" rel="noopener">UCLA Anderson</a> and <a href="https://www.stern.nyu.edu/" target="_blank" rel="noopener">NYU Stern</a>.</p>
+        </div>
+      </div>
+
+      <div class="social-links">
+        <a href="mailto:skot@skotcarruth.com">E-mail me</a>
+        <a href="http://instagram.com/skotcarruth" target="_blank" rel="noopener">Personal Instagram</a>
+        <a href="http://linkedin.com/in/skotcarruth" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="right">
+      <img class="portrait" src="images/portrait.jpg" alt="Skot Carruth portrait">
+      <div class="photo-overlay">
+        <div class="name-block">
+          <h1>Skot Carruth</h1>
+          <div class="role">Entrepreneur</div>
+        </div>
+        <p class="tagline">NY-based entrepreneur with a background in finance and user experience design. Usually looking up and to the right.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
